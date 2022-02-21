@@ -184,7 +184,7 @@ export const SkillsGalaxy = () => {
         </GalaxyRing>
 
         <GalaxyRing
-          radius={["25vw", "20vw", "18vw", "14vw"]}
+          radius={["23vw", "19vw", "18vw", "14vw"]}
           childrenSize={iconSizes}
           animationSpeed="faster"
         >

@@ -47,6 +47,7 @@ export const PresentationPlanet = () => {
         component="p"
         gutterBottom
         color="text.secondary"
+        sx={{ pr: 2 }}
       >
         i help companies to turn ideas from zero into a functional and wonderful
         experience
