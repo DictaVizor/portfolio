@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-const withTM = require("next-transpile-modules")(["@portfolio/icons"])
+const withTM = require("next-transpile-modules")(["@portfolio/icons", "@portfolio/common"])
 
 
 const nextConfig = {

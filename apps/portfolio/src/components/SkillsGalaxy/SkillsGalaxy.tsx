@@ -253,3 +253,5 @@ export const SkillsGalaxy = () => {
     </Box>
   );
 };
+
+export default SkillsGalaxy;

@@ -46,6 +46,7 @@ export const GalaxyRing = ({
         border: "solid 1px",
         display: "flex",
         position: "absolute",
+        borderColor: "text.disabled",
       }}
       component={motion.div}
       animate={{
@@ -79,3 +80,5 @@ export const GalaxyRing = ({
     </Box>
   );
 };
+
+export default GalaxyRing;

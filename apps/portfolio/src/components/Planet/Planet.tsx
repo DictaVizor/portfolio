@@ -16,7 +16,7 @@ export const Planet = (props: PlanetProps) => {
 
   return (
     <Box
-      component={motion.div}
+      {...boxProps}
       sx={{
         height: size,
         width: size,
@@ -28,6 +28,7 @@ export const Planet = (props: PlanetProps) => {
         )}`,
         ...boxProps?.sx,
       }}
+      component={motion.div}
       animate={{
         boxShadow: `0px 0px 0px ${boxShadowSize * 0.7}px ${alpha(
           lighten(color, 0.1),
@@ -45,3 +46,5 @@ export const Planet = (props: PlanetProps) => {
     </Box>
   );
 };
+
+export default Planet;

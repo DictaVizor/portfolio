@@ -48,3 +48,5 @@ export function GalaxyRingItem<C extends React.ElementType = "div">({
     </Box>
   );
 }
+
+export default GalaxyRingItem;

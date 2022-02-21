@@ -1,1 +1,1 @@
-export {BaseStar, SmallStar, MediumStar, StarsBackground} from "./StarBackground"
+export {BaseStar, SmallStar, MediumStar, StarsBackground} from "./StarsBackground"

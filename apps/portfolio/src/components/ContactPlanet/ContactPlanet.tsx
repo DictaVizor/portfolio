@@ -2,16 +2,17 @@ import { Planet } from "../Planet";
 import { Typography, Box, SvgIcon, IconButton } from "@mui/material";
 import { ContactButton } from "../ContactButton";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { Link } from "@portfolio/common";
 
 export const ContactPlanet = () => {
   return (
     <Planet
       sx={{
-        mr: "0",
-        ml: "auto",
+        mr: ["0", "0"],
+        ml: ["0", "auto"],
         transform: ["translateY(20%)", "translateY(65%)"],
       }}
-      size={["90vw", "70vw"]}
+      size={["100vw", "70vw"]}
       innerBoxProps={{
         sx: {
           display: "flex",
@@ -53,6 +54,9 @@ export const ContactPlanet = () => {
               color: "text.primary",
               fontSize: 30,
             }}
+            LinkComponent={Link}
+            href={"https://www.linkedin.com/in/victor-diaz-4956a0211/"}
+            target="_blank"
           >
             <SvgIcon component={BsLinkedin} inheritViewBox fontSize="inherit" />
           </IconButton>
@@ -62,6 +66,9 @@ export const ContactPlanet = () => {
               color: "text.primary",
               fontSize: 30,
             }}
+            LinkComponent={Link}
+            href={"https://github.com/DictaVizor"}
+            target="_blank"
           >
             <SvgIcon component={BsGithub} inheritViewBox fontSize="inherit" />
           </IconButton>
@@ -70,3 +77,5 @@ export const ContactPlanet = () => {
     </Planet>
   );
 };
+
+export default ContactPlanet;

@@ -3,6 +3,7 @@ import {
   Planet,
   PresentationPlanet,
   SkillsGalaxy,
+  AppBar,
 } from "@/src/components";
 import { ContactPlanet } from "@/src/components/ContactPlanet";
 import { Container } from "@mui/material";
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
         <meta name="description" content="victor diaz portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <AppBar />
       <StarsBackground />
       <PresentationPlanet />
       <SkillsGalaxy />

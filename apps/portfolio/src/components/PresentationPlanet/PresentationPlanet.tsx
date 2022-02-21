@@ -66,3 +66,5 @@ export const PresentationPlanet = () => {
     </Planet>
   );
 };
+
+export default PresentationPlanet;
