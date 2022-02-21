@@ -1,6 +1,7 @@
 import { Button, Typography, SvgIcon, Box, darken } from "@mui/material";
 import { Planet } from "../Planet";
 import { MdMail } from "react-icons/md";
+import { ContactButton } from "../ContactButton";
 
 export const PresentationPlanet = () => {
   return (
@@ -50,33 +51,7 @@ export const PresentationPlanet = () => {
         i help companies to turn ideas from zero into a functional and wonderful
         experience
       </Typography>
-      <Button
-        variant="contained"
-        sx={{
-          backgroundColor: "black",
-          textTransform: "none",
-        }}
-        startIcon={
-          <SvgIcon
-            component={MdMail}
-            inheritViewBox
-            sx={{
-              fontSize: 40,
-            }}
-          />
-        }
-        size="large"
-      >
-        <Typography
-          variant="h5"
-          component="span"
-          sx={{
-            padding: 1,
-          }}
-        >
-          contact@victor-diaz.dev
-        </Typography>
-      </Button>
+      <ContactButton />
       <Box
         sx={{
           borderRadius: "50%",

@@ -3,6 +3,8 @@ import { Planet } from "../Planet";
 import { GalaxyRing } from "./GalaxyRing";
 import { TsIcon } from "@portfolio/icons";
 
+const iconSizes = ["1em", "2em", "2em", "2em"];
+
 export const SkillsGalaxy = () => {
   const theme = useTheme();
   return (
@@ -31,29 +33,44 @@ export const SkillsGalaxy = () => {
           position: "relative",
         }}
       >
-        <GalaxyRing radius="35vw" childrenSize="2em">
+        <GalaxyRing
+          radius={["45vw", "40vw", "38vw", "26vw"]}
+          childrenSize={iconSizes}
+          animationSpeed="slow"
+        >
           <SvgIcon
             component={TsIcon}
-            sx={{ height: "2em", width: "2em" }}
+            sx={{ height: iconSizes, width: iconSizes }}
             inheritViewBox
           />
         </GalaxyRing>
-        <GalaxyRing radius="25vw" childrenSize="2em">
+
+        <GalaxyRing
+          radius={["35vw", "30vw", "28vw", "20vw"]}
+          childrenSize={iconSizes}
+          animationSpeed="fast"
+        >
           <SvgIcon
             component={TsIcon}
-            sx={{ height: "2em", width: "2em" }}
+            sx={{ height: iconSizes, width: iconSizes }}
             inheritViewBox
           />
         </GalaxyRing>
-        <GalaxyRing radius="15vw" childrenSize="2em">
+
+        <GalaxyRing
+          radius={["25vw", "20vw", "18vw", "14vw"]}
+          childrenSize={iconSizes}
+          animationSpeed="faster"
+        >
           <SvgIcon
             component={TsIcon}
-            sx={{ height: "2em", width: "2em" }}
+            sx={{ height: iconSizes, width: iconSizes }}
             inheritViewBox
           />
         </GalaxyRing>
+
         <Planet
-          size={[100, 120, 200]}
+          size={[80, 80, 120]}
           boxShadowSize={10}
           color={theme.palette.secondary.main}
           innerBoxProps={{
@@ -67,7 +84,7 @@ export const SkillsGalaxy = () => {
         >
           <Typography
             component="h1"
-            variant="h3"
+            variant="h4"
             sx={{
               color: "transparent",
               WebkitTextStroke: "1px white",

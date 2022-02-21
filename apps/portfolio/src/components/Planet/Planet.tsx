@@ -18,7 +18,6 @@ export const Planet = (props: PlanetProps) => {
     <Box
       component={motion.div}
       sx={{
-        ...boxProps?.sx,
         height: size,
         width: size,
         backgroundColor: color,
@@ -27,6 +26,7 @@ export const Planet = (props: PlanetProps) => {
           lighten(color, 0.1),
           0.28
         )}`,
+        ...boxProps?.sx,
       }}
       animate={{
         boxShadow: `0px 0px 0px ${boxShadowSize * 0.7}px ${alpha(

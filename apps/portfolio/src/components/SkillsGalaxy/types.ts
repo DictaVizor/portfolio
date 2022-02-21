@@ -4,6 +4,7 @@ export type GalaxyRingProps = {
     radius: number | string | Array<number | string>;
     children?: React.ReactNode;
     childrenSize: number | string | Array<number | string>;
+    animationSpeed?: "slow" | "fast" | "faster";
 }
 
 
