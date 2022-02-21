@@ -1,0 +1,1 @@
+export {TypeScriptIcon} from "./TypeScriptIcon"
