@@ -10,7 +10,7 @@ export const MuiIcon = (props: IconTypeProps) => {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <g clip-path="url(#clip0_8_277)">
+      <g clipPath="url(#clip0_8_277)">
         <path
           d="M0.373535 21.7349V0L19.1971 10.8675V18.1124L6.64805 10.8675V25.3574L0.373535 21.7349Z"
           fill="#00B0FF"

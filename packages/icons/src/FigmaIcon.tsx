@@ -10,7 +10,7 @@ export const FigmaIcon = (props: IconTypeProps) => {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <g clip-path="url(#clip0_8_135)">
+      <g clipPath="url(#clip0_8_135)">
         <path
           d="M7.23586 39.9999C10.9159 39.9999 13.9025 37.0133 13.9025 33.3333V26.6667H7.23586C3.55585 26.6667 0.569183 29.6533 0.569183 33.3333C0.569183 37.0133 3.55585 39.9999 7.23586 39.9999Z"
           fill="#0ACF83"
