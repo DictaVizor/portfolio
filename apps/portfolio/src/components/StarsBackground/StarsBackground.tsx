@@ -136,3 +136,5 @@ export const StarsBackground = () => {
     </Fragment>
   );
 };
+
+export default StarsBackground;
