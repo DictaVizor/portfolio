@@ -49,8 +49,8 @@ export const PresentationPlanet = () => {
         color="text.secondary"
         sx={{ pr: 2 }}
       >
-        i help companies to turn ideas from zero into a functional and wonderful
-        experience
+        I help companies to turn ideas from zero into a functional and wonderful
+        experience.
       </Typography>
       <ContactButton />
       <Box
