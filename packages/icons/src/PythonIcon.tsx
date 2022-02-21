@@ -29,8 +29,8 @@ export const PythonIcon = (props: IconTypeProps) => {
           y2="23.4452"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#387EB8" />
-          <stop offset="1" stop-color="#366994" />
+          <stop stopColor="#387EB8" />
+          <stop offset="1" stopColor="#366994" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_8_16"
@@ -40,8 +40,8 @@ export const PythonIcon = (props: IconTypeProps) => {
           y2="36.6449"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFE052" />
-          <stop offset="1" stop-color="#FFC331" />
+          <stop stopColor="#FFE052" />
+          <stop offset="1" stopColor="#FFC331" />
         </linearGradient>
         <clipPath id="clip0_8_16">
           <rect width="40.2094" height="40" fill="white" />

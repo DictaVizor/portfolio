@@ -37,8 +37,8 @@ export const AntIcon = (props: IconTypeProps) => {
           y2="10.1849"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#4285EB" />
-          <stop offset="1" stop-color="#2EC7FF" />
+          <stop stopColor="#4285EB" />
+          <stop offset="1" stopColor="#2EC7FF" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_8_283"
@@ -48,9 +48,9 @@ export const AntIcon = (props: IconTypeProps) => {
           y2="42.5725"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#29CDFF" />
-          <stop offset="0.378601" stop-color="#148EFF" />
-          <stop offset="1" stop-color="#0A60FF" />
+          <stop stopColor="#29CDFF" />
+          <stop offset="0.378601" stopColor="#148EFF" />
+          <stop offset="1" stopColor="#0A60FF" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_8_283"
@@ -60,9 +60,9 @@ export const AntIcon = (props: IconTypeProps) => {
           y2="26.9791"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FA816E" />
-          <stop offset="0.414726" stop-color="#F74A5C" />
-          <stop offset="1" stop-color="#F51D2C" />
+          <stop stopColor="#FA816E" />
+          <stop offset="0.414726" stopColor="#F74A5C" />
+          <stop offset="1" stopColor="#F51D2C" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_8_283"
@@ -72,9 +72,9 @@ export const AntIcon = (props: IconTypeProps) => {
           y2="26.1888"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FA8E7D" />
-          <stop offset="0.512635" stop-color="#F74A5C" />
-          <stop offset="1" stop-color="#F51D2C" />
+          <stop stopColor="#FA8E7D" />
+          <stop offset="0.512635" stopColor="#F74A5C" />
+          <stop offset="1" stopColor="#F51D2C" />
         </linearGradient>
         <clipPath id="clip0_8_283">
           <rect
