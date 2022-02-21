@@ -2,7 +2,7 @@ import { GalaxyRingProps } from "./types";
 import { Box } from "@mui/material";
 import React, { useMemo } from "react";
 import { GalaxyRingItem } from "./GalaxyRingItem";
-import { motion } from "framer-motion";
+import { motion, Transition } from "framer-motion";
 
 // https://stackoverflow.com/questions/12813573/position-icons-into-circle
 
@@ -11,6 +11,15 @@ const duration: Record<string, number> = {
   fast: 8,
   faster: 6,
 };
+
+const getTransition = (
+  animationSpeed: GalaxyRingProps["animationSpeed"] = "slow"
+): Transition => ({
+  ease: "linear",
+  duration: duration[animationSpeed],
+  repeat: Infinity,
+  repeatType: "loop",
+});
 
 export const GalaxyRing = ({
   radius,
@@ -42,12 +51,7 @@ export const GalaxyRing = ({
       animate={{
         transform: "rotate(360deg)",
       }}
-      transition={{
-        ease: "linear",
-        duration: duration[animationSpeed],
-        repeat: Infinity,
-        repeatType: "loop",
-      }}
+      transition={getTransition(animationSpeed)}
     >
       {React.Children.map(children, (child, childIndex) => {
         if (!React.isValidElement(child)) {
@@ -56,12 +60,18 @@ export const GalaxyRing = ({
 
         return (
           <GalaxyRingItem
-            position={childIndex * 1}
+            childrenPosition={childIndex * 1}
             totalChildren={count}
             radius={radius}
             childrenSize={childrenSize}
           >
-            {React.cloneElement(child)}
+            <Box
+              component={motion.div}
+              animate={{ transform: "rotate(-360deg)" }}
+              transition={getTransition(animationSpeed)}
+            >
+              {React.cloneElement(child)}
+            </Box>
           </GalaxyRingItem>
         );
       })}

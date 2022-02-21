@@ -1,3 +1,4 @@
+import { BoxProps } from "@mui/material";
 import React from "react";
 
 export type GalaxyRingProps = {
@@ -8,9 +9,9 @@ export type GalaxyRingProps = {
 }
 
 
-export type GalaxyRingItemProps = {
+export type GalaxyRingItemProps<C extends React.ElementType = "div"> = BoxProps<C, {component?: C}> & {
     children?: React.ReactNode;
-    position: number;
+    childrenPosition: number;
     totalChildren: number;
     radius: GalaxyRingProps["radius"];
     childrenSize: number | string | Array<number | string>;

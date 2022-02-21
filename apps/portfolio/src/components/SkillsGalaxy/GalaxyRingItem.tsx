@@ -1,17 +1,18 @@
 import { Box } from "@mui/material";
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 import { GalaxyRingItemProps } from "./types";
 
 // https://stackoverflow.com/questions/12813573/position-icons-into-circle
 
-export const GalaxyRingItem = ({
+export function GalaxyRingItem<C extends React.ElementType = "div">({
   children,
-  position,
+  childrenPosition,
   totalChildren,
   childrenSize,
   radius,
-}: GalaxyRingItemProps) => {
-  const angle = `calc(${position}*1turn/${totalChildren})`;
+  ...props
+}: GalaxyRingItemProps<C>) {
+  const angle = `calc(${childrenPosition}*1turn/${totalChildren})`;
 
   const transform = useMemo(() => {
     if (typeof radius === "number" || typeof radius === "string") {
@@ -41,8 +42,9 @@ export const GalaxyRingItem = ({
         transform: transform,
         margin: margin,
       }}
+      {...props}
     >
       {children}
     </Box>
   );
-};
+}
