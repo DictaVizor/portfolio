@@ -1,7 +1,7 @@
 {
     "name": "@portfolio/root",
     "version": "1.0.0",
-    "private": "true",
+    "private": true,
     "workspaces": [
         "packages/*",
         "apps/*",
@@ -15,14 +15,10 @@
         "@babel/preset-typescript": "^7.16.7",
         "@preconstruct/cli": "^2.1.5"
     },
-    "preconstruct": {
-        "packages": [
-            "packages/*",
-            "services/*"
-        ]
-    },
     "scripts": {
-        "postinstall": "preconstruct dev",
-        "build": "preconstruct build"
+        "build": "turbo run build"
+    },
+    "devDependencies": {
+        "turbo": "^1.1.3"
     }
 }

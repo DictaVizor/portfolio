@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 
-const withPreconstruct = require("@preconstruct/next")
+const withTM = require("next-transpile-modules")(["@portfolio/icons"])
 
 
 const nextConfig = {
     reactStrictMode: true,
 }
 
-module.exports = withPreconstruct(nextConfig)
+module.exports = withTM(nextConfig)
