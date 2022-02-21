@@ -1,0 +1,10 @@
+{
+    "name": "@portfolio/icons",
+    "version": "1.0.0",
+    "description": "Collection of various svg icons",
+    "main": "dist/portfolio-icons.cjs.js",
+    "module": "dist/portfolio-icons.esm.js",
+    "dependencies": {
+        "react": "^17.0.2"
+    }
+}
