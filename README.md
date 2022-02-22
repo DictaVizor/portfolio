@@ -1,14 +1,9 @@
 # Victor Diaz - Full Stack Developer :briefcase:
-![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white?link=https://www.linkedin.com/in/victor-diaz-4956a0211/)
-![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white&?link=https://www.figma.com/file/NjKGzTZhsFtHKuQxEy0O6c/Portfolio-Mockup?node-id=0%3A1)
-![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white&?link=https://trello.com/b/dffL9Wz5/portfolio)
 
 
 ![portfolio_preview](https://user-images.githubusercontent.com/85518500/155044220-77d34ff9-22f3-427c-9a8e-de0a4c5c163e.png)
 
 ## <div align="center"><a href="https://victor-diaz.dev">View site</a></div>
-
-# License
 
 
 # Built With :wrench:
@@ -26,3 +21,4 @@
 * [Figma mockup](https://www.figma.com/file/NjKGzTZhsFtHKuQxEy0O6c/Portfolio-Mockup?node-id=0%3A1).
 * [Linkedin](https://www.linkedin.com/in/victor-diaz-4956a0211/)
 * [Website](https://victor-diaz.dev)
+* [Trello](https://trello.com/b/dffL9Wz5/portfolio)
