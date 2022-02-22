@@ -7,9 +7,9 @@ import { motion, Transition } from "framer-motion";
 // https://stackoverflow.com/questions/12813573/position-icons-into-circle
 
 const duration: Record<string, number> = {
-  slow: 24,
-  fast: 20,
-  faster: 16,
+  slow: 40,
+  fast: 30,
+  faster: 20,
 };
 
 const getTransition = (

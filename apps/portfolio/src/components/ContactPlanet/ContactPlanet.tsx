@@ -11,19 +11,38 @@ export const ContactPlanet = () => {
         mr: ["0", "0"],
         ml: ["0", "auto"],
         transform: ["translateY(20%)", "translateY(65%)"],
+        overflow: "hidden",
       }}
-      size={["100vw", "70vw"]}
+      size={["100vw", "100vw", "70vw"]}
       innerBoxProps={{
         sx: {
           display: "flex",
           alignItems: "center",
-          pt: 4,
           flexDirection: "column",
+          pt: {
+            xs: 4,
+            md: 6,
+            lg: 12,
+          },
         },
       }}
       color="#a9a9a9"
+      boxShadowSize={25}
     >
-      <Typography
+      <Box
+        sx={{
+          borderRadius: "50%",
+          height: [50, 100],
+          width: [50, 100],
+          backgroundColor: "lightGray",
+          top: ["6vw", "10vw"],
+          left: "10vw",
+          position: "absolute",
+          zIndex: -1,
+        }}
+      />
+
+      {/* <Typography
         variant="h4"
         sx={{
           color: "transparent",
@@ -32,7 +51,7 @@ export const ContactPlanet = () => {
         component="h1"
       >
         Contact
-      </Typography>
+      </Typography> */}
       <Typography variant="h3" component="p" fontWeight="medium">
         Interested ?
       </Typography>
@@ -47,7 +66,7 @@ export const ContactPlanet = () => {
         }}
       >
         <ContactButton />
-        <Box sx={{ mr: "auto", ml: "auto" }}>
+        <Box sx={{ mr: "auto", ml: "auto", px: 2 }}>
           <IconButton
             size="large"
             sx={{
