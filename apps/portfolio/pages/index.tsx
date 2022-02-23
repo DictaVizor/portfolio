@@ -1,11 +1,11 @@
 import {
   StarsBackground,
-  Planet,
   PresentationPlanet,
   SkillsGalaxy,
   AppBar,
+  ContactPlanet,
+  ProjectSection,
 } from "@/src/components";
-import { ContactPlanet } from "@/src/components/ContactPlanet";
 import { Container } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -22,6 +22,7 @@ const Home: NextPage = () => {
       <StarsBackground />
       <PresentationPlanet />
       <SkillsGalaxy />
+      <ProjectSection />
       <ContactPlanet />
     </Container>
   );

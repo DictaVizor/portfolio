@@ -4,3 +4,7 @@ export * from "./StarsBackground";
 export * from "./PresentationPlanet"
 export * from "./SkillsGalaxy"
 export * from "./AppBar"
+export * from "./ContactPlanet"
+export * from "./ProjectSection"
+export * from "./ProjectList"
+export * from "./ProjectCard"
