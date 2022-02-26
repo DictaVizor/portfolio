@@ -23,7 +23,9 @@ const theme = responsiveFontSizes(createTheme({
         disabled: "rgb(255, 255, 255, 0.15)"
     },
   },
-}));
+}), {
+  breakpoints: ["sm", "md", "lg", "xl"]
+});
 
 
 
