@@ -1,2 +1,2 @@
-export { TokenRelationsResolver } from "./Token/TokenRelationsResolver";
+export { RefreshTokenRelationsResolver } from "./RefreshToken/RefreshTokenRelationsResolver";
 export { UserRelationsResolver } from "./User/UserRelationsResolver";

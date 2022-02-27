@@ -6,9 +6,9 @@ import { DateTimeFilter } from "../inputs/DateTimeFilter";
 import { EnumRoleFilter } from "../inputs/EnumRoleFilter";
 import { IntFilter } from "../inputs/IntFilter";
 import { JsonNullableFilter } from "../inputs/JsonNullableFilter";
+import { RefreshTokenListRelationFilter } from "../inputs/RefreshTokenListRelationFilter";
 import { StringFilter } from "../inputs/StringFilter";
 import { StringNullableFilter } from "../inputs/StringNullableFilter";
-import { TokenListRelationFilter } from "../inputs/TokenListRelationFilter";
 
 @TypeGraphQL.InputType("UserWhereInput", {
   isAbstract: true
@@ -69,8 +69,8 @@ export class UserWhereInput {
   })
   social?: JsonNullableFilter | undefined;
 
-  @TypeGraphQL.Field(_type => TokenListRelationFilter, {
+  @TypeGraphQL.Field(_type => RefreshTokenListRelationFilter, {
     nullable: true
   })
-  tokens?: TokenListRelationFilter | undefined;
+  tokens?: RefreshTokenListRelationFilter | undefined;
 }

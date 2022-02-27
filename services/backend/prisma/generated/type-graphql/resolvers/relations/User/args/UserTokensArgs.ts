@@ -1,26 +1,26 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
-import { TokenOrderByWithRelationInput } from "../../../inputs/TokenOrderByWithRelationInput";
-import { TokenWhereInput } from "../../../inputs/TokenWhereInput";
-import { TokenWhereUniqueInput } from "../../../inputs/TokenWhereUniqueInput";
-import { TokenScalarFieldEnum } from "../../../../enums/TokenScalarFieldEnum";
+import { RefreshTokenOrderByWithRelationInput } from "../../../inputs/RefreshTokenOrderByWithRelationInput";
+import { RefreshTokenWhereInput } from "../../../inputs/RefreshTokenWhereInput";
+import { RefreshTokenWhereUniqueInput } from "../../../inputs/RefreshTokenWhereUniqueInput";
+import { RefreshTokenScalarFieldEnum } from "../../../../enums/RefreshTokenScalarFieldEnum";
 
 @TypeGraphQL.ArgsType()
 export class UserTokensArgs {
-  @TypeGraphQL.Field(_type => TokenWhereInput, {
+  @TypeGraphQL.Field(_type => RefreshTokenWhereInput, {
     nullable: true
   })
-  where?: TokenWhereInput | undefined;
+  where?: RefreshTokenWhereInput | undefined;
 
-  @TypeGraphQL.Field(_type => [TokenOrderByWithRelationInput], {
+  @TypeGraphQL.Field(_type => [RefreshTokenOrderByWithRelationInput], {
     nullable: true
   })
-  orderBy?: TokenOrderByWithRelationInput[] | undefined;
+  orderBy?: RefreshTokenOrderByWithRelationInput[] | undefined;
 
-  @TypeGraphQL.Field(_type => TokenWhereUniqueInput, {
+  @TypeGraphQL.Field(_type => RefreshTokenWhereUniqueInput, {
     nullable: true
   })
-  cursor?: TokenWhereUniqueInput | undefined;
+  cursor?: RefreshTokenWhereUniqueInput | undefined;
 
   @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
     nullable: true
@@ -32,8 +32,8 @@ export class UserTokensArgs {
   })
   skip?: number | undefined;
 
-  @TypeGraphQL.Field(_type => [TokenScalarFieldEnum], {
+  @TypeGraphQL.Field(_type => [RefreshTokenScalarFieldEnum], {
     nullable: true
   })
-  distinct?: Array<"id" | "createdAt" | "updatedAt" | "type" | "emailToken" | "valid" | "expiration" | "userId"> | undefined;
+  distinct?: Array<"id" | "createdAt" | "updatedAt" | "type" | "token" | "valid" | "expiration" | "userId"> | undefined;
 }

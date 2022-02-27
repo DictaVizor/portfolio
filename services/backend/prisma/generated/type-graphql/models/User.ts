@@ -2,7 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../scalars";
-import { Token } from "../models/Token";
+import { RefreshToken } from "../models/RefreshToken";
 import { Role } from "../enums/Role";
 import { UserCount } from "../resolvers/outputs/UserCount";
 
@@ -50,7 +50,7 @@ export class User {
   })
   social?: Prisma.JsonValue | null;
 
-  tokens?: Token[];
+  tokens?: RefreshToken[];
 
   @TypeGraphQL.Field(_type => UserCount, {
     nullable: true

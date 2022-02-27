@@ -10,7 +10,7 @@ import * as inputTypes from "./resolvers/inputs";
 
 const crudResolversMap = {
   User: crudResolvers.UserCrudResolver,
-  Token: crudResolvers.TokenCrudResolver
+  RefreshToken: crudResolvers.RefreshTokenCrudResolver
 };
 const actionResolversMap = {
   User: {
@@ -27,24 +27,24 @@ const actionResolversMap = {
     aggregateUser: actionResolvers.AggregateUserResolver,
     groupByUser: actionResolvers.GroupByUserResolver
   },
-  Token: {
-    token: actionResolvers.FindUniqueTokenResolver,
-    findFirstToken: actionResolvers.FindFirstTokenResolver,
-    tokens: actionResolvers.FindManyTokenResolver,
-    createToken: actionResolvers.CreateTokenResolver,
-    createManyToken: actionResolvers.CreateManyTokenResolver,
-    deleteToken: actionResolvers.DeleteTokenResolver,
-    updateToken: actionResolvers.UpdateTokenResolver,
-    deleteManyToken: actionResolvers.DeleteManyTokenResolver,
-    updateManyToken: actionResolvers.UpdateManyTokenResolver,
-    upsertToken: actionResolvers.UpsertTokenResolver,
-    aggregateToken: actionResolvers.AggregateTokenResolver,
-    groupByToken: actionResolvers.GroupByTokenResolver
+  RefreshToken: {
+    refreshToken: actionResolvers.FindUniqueRefreshTokenResolver,
+    findFirstRefreshToken: actionResolvers.FindFirstRefreshTokenResolver,
+    refreshTokens: actionResolvers.FindManyRefreshTokenResolver,
+    createRefreshToken: actionResolvers.CreateRefreshTokenResolver,
+    createManyRefreshToken: actionResolvers.CreateManyRefreshTokenResolver,
+    deleteRefreshToken: actionResolvers.DeleteRefreshTokenResolver,
+    updateRefreshToken: actionResolvers.UpdateRefreshTokenResolver,
+    deleteManyRefreshToken: actionResolvers.DeleteManyRefreshTokenResolver,
+    updateManyRefreshToken: actionResolvers.UpdateManyRefreshTokenResolver,
+    upsertRefreshToken: actionResolvers.UpsertRefreshTokenResolver,
+    aggregateRefreshToken: actionResolvers.AggregateRefreshTokenResolver,
+    groupByRefreshToken: actionResolvers.GroupByRefreshTokenResolver
   }
 };
 const crudResolversInfo = {
   User: ["user", "findFirstUser", "users", "createUser", "createManyUser", "deleteUser", "updateUser", "deleteManyUser", "updateManyUser", "upsertUser", "aggregateUser", "groupByUser"],
-  Token: ["token", "findFirstToken", "tokens", "createToken", "createManyToken", "deleteToken", "updateToken", "deleteManyToken", "updateManyToken", "upsertToken", "aggregateToken", "groupByToken"]
+  RefreshToken: ["refreshToken", "findFirstRefreshToken", "refreshTokens", "createRefreshToken", "createManyRefreshToken", "deleteRefreshToken", "updateRefreshToken", "deleteManyRefreshToken", "updateManyRefreshToken", "upsertRefreshToken", "aggregateRefreshToken", "groupByRefreshToken"]
 };
 const argsInfo = {
   FindUniqueUserArgs: ["where"],
@@ -59,18 +59,18 @@ const argsInfo = {
   UpsertUserArgs: ["where", "create", "update"],
   AggregateUserArgs: ["where", "orderBy", "cursor", "take", "skip"],
   GroupByUserArgs: ["where", "orderBy", "by", "having", "take", "skip"],
-  FindUniqueTokenArgs: ["where"],
-  FindFirstTokenArgs: ["where", "orderBy", "cursor", "take", "skip", "distinct"],
-  FindManyTokenArgs: ["where", "orderBy", "cursor", "take", "skip", "distinct"],
-  CreateTokenArgs: ["data"],
-  CreateManyTokenArgs: ["data", "skipDuplicates"],
-  DeleteTokenArgs: ["where"],
-  UpdateTokenArgs: ["data", "where"],
-  DeleteManyTokenArgs: ["where"],
-  UpdateManyTokenArgs: ["data", "where"],
-  UpsertTokenArgs: ["where", "create", "update"],
-  AggregateTokenArgs: ["where", "orderBy", "cursor", "take", "skip"],
-  GroupByTokenArgs: ["where", "orderBy", "by", "having", "take", "skip"]
+  FindUniqueRefreshTokenArgs: ["where"],
+  FindFirstRefreshTokenArgs: ["where", "orderBy", "cursor", "take", "skip", "distinct"],
+  FindManyRefreshTokenArgs: ["where", "orderBy", "cursor", "take", "skip", "distinct"],
+  CreateRefreshTokenArgs: ["data"],
+  CreateManyRefreshTokenArgs: ["data", "skipDuplicates"],
+  DeleteRefreshTokenArgs: ["where"],
+  UpdateRefreshTokenArgs: ["data", "where"],
+  DeleteManyRefreshTokenArgs: ["where"],
+  UpdateManyRefreshTokenArgs: ["data", "where"],
+  UpsertRefreshTokenArgs: ["where", "create", "update"],
+  AggregateRefreshTokenArgs: ["where", "orderBy", "cursor", "take", "skip"],
+  GroupByRefreshTokenArgs: ["where", "orderBy", "by", "having", "take", "skip"]
 };
 
 type ResolverModelNames = keyof typeof crudResolversMap;
@@ -161,11 +161,11 @@ export function applyArgsTypesEnhanceMap(
 
 const relationResolversMap = {
   User: relationResolvers.UserRelationsResolver,
-  Token: relationResolvers.TokenRelationsResolver
+  RefreshToken: relationResolvers.RefreshTokenRelationsResolver
 };
 const relationResolversInfo = {
   User: ["tokens"],
-  Token: ["user"]
+  RefreshToken: ["user"]
 };
 
 type RelationResolverModelNames = keyof typeof relationResolversMap;
@@ -247,7 +247,7 @@ function applyTypeClassEnhanceConfig<
 
 const modelsInfo = {
   User: ["id", "createdAt", "email", "firstName", "lastName", "password", "role", "social"],
-  Token: ["id", "createdAt", "updatedAt", "type", "emailToken", "valid", "expiration", "userId"]
+  RefreshToken: ["id", "createdAt", "updatedAt", "type", "token", "valid", "expiration", "userId"]
 };
 
 type ModelNames = keyof typeof models;
@@ -288,8 +288,8 @@ export function applyModelsEnhanceMap(modelsEnhanceMap: ModelsEnhanceMap) {
 const outputsInfo = {
   AggregateUser: ["_count", "_avg", "_sum", "_min", "_max"],
   UserGroupBy: ["id", "createdAt", "email", "firstName", "lastName", "password", "role", "social", "_count", "_avg", "_sum", "_min", "_max"],
-  AggregateToken: ["_count", "_avg", "_sum", "_min", "_max"],
-  TokenGroupBy: ["id", "createdAt", "updatedAt", "type", "emailToken", "valid", "expiration", "userId", "_count", "_avg", "_sum", "_min", "_max"],
+  AggregateRefreshToken: ["_count", "_avg", "_sum", "_min", "_max"],
+  RefreshTokenGroupBy: ["id", "createdAt", "updatedAt", "type", "token", "valid", "expiration", "userId", "_count", "_avg", "_sum", "_min", "_max"],
   AffectedRowsOutput: ["count"],
   UserCount: ["tokens"],
   UserCountAggregate: ["id", "createdAt", "email", "firstName", "lastName", "password", "role", "social", "_all"],
@@ -297,11 +297,11 @@ const outputsInfo = {
   UserSumAggregate: ["id"],
   UserMinAggregate: ["id", "createdAt", "email", "firstName", "lastName", "password", "role"],
   UserMaxAggregate: ["id", "createdAt", "email", "firstName", "lastName", "password", "role"],
-  TokenCountAggregate: ["id", "createdAt", "updatedAt", "type", "emailToken", "valid", "expiration", "userId", "_all"],
-  TokenAvgAggregate: ["id", "userId"],
-  TokenSumAggregate: ["id", "userId"],
-  TokenMinAggregate: ["id", "createdAt", "updatedAt", "type", "emailToken", "valid", "expiration", "userId"],
-  TokenMaxAggregate: ["id", "createdAt", "updatedAt", "type", "emailToken", "valid", "expiration", "userId"]
+  RefreshTokenCountAggregate: ["id", "createdAt", "updatedAt", "type", "token", "valid", "expiration", "userId", "_all"],
+  RefreshTokenAvgAggregate: ["id", "userId"],
+  RefreshTokenSumAggregate: ["id", "userId"],
+  RefreshTokenMinAggregate: ["id", "createdAt", "updatedAt", "type", "token", "valid", "expiration", "userId"],
+  RefreshTokenMaxAggregate: ["id", "createdAt", "updatedAt", "type", "token", "valid", "expiration", "userId"]
 };
 
 type OutputTypesNames = keyof typeof outputTypes;
@@ -347,27 +347,27 @@ const inputsInfo = {
   UserWhereUniqueInput: ["id", "email"],
   UserOrderByWithAggregationInput: ["id", "createdAt", "email", "firstName", "lastName", "password", "role", "social", "_count", "_avg", "_max", "_min", "_sum"],
   UserScalarWhereWithAggregatesInput: ["AND", "OR", "NOT", "id", "createdAt", "email", "firstName", "lastName", "password", "role", "social"],
-  TokenWhereInput: ["AND", "OR", "NOT", "id", "createdAt", "updatedAt", "type", "emailToken", "valid", "expiration", "user", "userId"],
-  TokenOrderByWithRelationInput: ["id", "createdAt", "updatedAt", "type", "emailToken", "valid", "expiration", "user", "userId"],
-  TokenWhereUniqueInput: ["id", "emailToken"],
-  TokenOrderByWithAggregationInput: ["id", "createdAt", "updatedAt", "type", "emailToken", "valid", "expiration", "userId", "_count", "_avg", "_max", "_min", "_sum"],
-  TokenScalarWhereWithAggregatesInput: ["AND", "OR", "NOT", "id", "createdAt", "updatedAt", "type", "emailToken", "valid", "expiration", "userId"],
+  RefreshTokenWhereInput: ["AND", "OR", "NOT", "id", "createdAt", "updatedAt", "type", "token", "valid", "expiration", "user", "userId"],
+  RefreshTokenOrderByWithRelationInput: ["id", "createdAt", "updatedAt", "type", "token", "valid", "expiration", "user", "userId"],
+  RefreshTokenWhereUniqueInput: ["id", "token"],
+  RefreshTokenOrderByWithAggregationInput: ["id", "createdAt", "updatedAt", "type", "token", "valid", "expiration", "userId", "_count", "_avg", "_max", "_min", "_sum"],
+  RefreshTokenScalarWhereWithAggregatesInput: ["AND", "OR", "NOT", "id", "createdAt", "updatedAt", "type", "token", "valid", "expiration", "userId"],
   UserCreateInput: ["createdAt", "email", "firstName", "lastName", "password", "role", "social", "tokens"],
   UserUpdateInput: ["createdAt", "email", "firstName", "lastName", "password", "role", "social", "tokens"],
   UserCreateManyInput: ["id", "createdAt", "email", "firstName", "lastName", "password", "role", "social"],
   UserUpdateManyMutationInput: ["createdAt", "email", "firstName", "lastName", "password", "role", "social"],
-  TokenCreateInput: ["createdAt", "updatedAt", "type", "emailToken", "valid", "expiration", "user"],
-  TokenUpdateInput: ["createdAt", "updatedAt", "type", "emailToken", "valid", "expiration", "user"],
-  TokenCreateManyInput: ["id", "createdAt", "updatedAt", "type", "emailToken", "valid", "expiration", "userId"],
-  TokenUpdateManyMutationInput: ["createdAt", "updatedAt", "type", "emailToken", "valid", "expiration"],
+  RefreshTokenCreateInput: ["createdAt", "updatedAt", "type", "token", "valid", "expiration", "user"],
+  RefreshTokenUpdateInput: ["createdAt", "updatedAt", "type", "token", "valid", "expiration", "user"],
+  RefreshTokenCreateManyInput: ["id", "createdAt", "updatedAt", "type", "token", "valid", "expiration", "userId"],
+  RefreshTokenUpdateManyMutationInput: ["createdAt", "updatedAt", "type", "token", "valid", "expiration"],
   IntFilter: ["equals", "in", "notIn", "lt", "lte", "gt", "gte", "not"],
   DateTimeFilter: ["equals", "in", "notIn", "lt", "lte", "gt", "gte", "not"],
   StringFilter: ["equals", "in", "notIn", "lt", "lte", "gt", "gte", "contains", "startsWith", "endsWith", "not"],
   StringNullableFilter: ["equals", "in", "notIn", "lt", "lte", "gt", "gte", "contains", "startsWith", "endsWith", "not"],
   EnumRoleFilter: ["equals", "in", "notIn", "not"],
   JsonNullableFilter: ["equals", "not"],
-  TokenListRelationFilter: ["every", "some", "none"],
-  TokenOrderByRelationAggregateInput: ["_count"],
+  RefreshTokenListRelationFilter: ["every", "some", "none"],
+  RefreshTokenOrderByRelationAggregateInput: ["_count"],
   UserCountOrderByAggregateInput: ["id", "createdAt", "email", "firstName", "lastName", "password", "role", "social"],
   UserAvgOrderByAggregateInput: ["id"],
   UserMaxOrderByAggregateInput: ["id", "createdAt", "email", "firstName", "lastName", "password", "role"],
@@ -382,19 +382,19 @@ const inputsInfo = {
   EnumTokenTypeFilter: ["equals", "in", "notIn", "not"],
   BoolFilter: ["equals", "not"],
   UserRelationFilter: ["is", "isNot"],
-  TokenCountOrderByAggregateInput: ["id", "createdAt", "updatedAt", "type", "emailToken", "valid", "expiration", "userId"],
-  TokenAvgOrderByAggregateInput: ["id", "userId"],
-  TokenMaxOrderByAggregateInput: ["id", "createdAt", "updatedAt", "type", "emailToken", "valid", "expiration", "userId"],
-  TokenMinOrderByAggregateInput: ["id", "createdAt", "updatedAt", "type", "emailToken", "valid", "expiration", "userId"],
-  TokenSumOrderByAggregateInput: ["id", "userId"],
+  RefreshTokenCountOrderByAggregateInput: ["id", "createdAt", "updatedAt", "type", "token", "valid", "expiration", "userId"],
+  RefreshTokenAvgOrderByAggregateInput: ["id", "userId"],
+  RefreshTokenMaxOrderByAggregateInput: ["id", "createdAt", "updatedAt", "type", "token", "valid", "expiration", "userId"],
+  RefreshTokenMinOrderByAggregateInput: ["id", "createdAt", "updatedAt", "type", "token", "valid", "expiration", "userId"],
+  RefreshTokenSumOrderByAggregateInput: ["id", "userId"],
   EnumTokenTypeWithAggregatesFilter: ["equals", "in", "notIn", "not", "_count", "_min", "_max"],
   BoolWithAggregatesFilter: ["equals", "not", "_count", "_min", "_max"],
-  TokenCreateNestedManyWithoutUserInput: ["create", "connectOrCreate", "createMany", "connect"],
+  RefreshTokenCreateNestedManyWithoutUserInput: ["create", "connectOrCreate", "createMany", "connect"],
   DateTimeFieldUpdateOperationsInput: ["set"],
   StringFieldUpdateOperationsInput: ["set"],
   NullableStringFieldUpdateOperationsInput: ["set"],
   EnumRoleFieldUpdateOperationsInput: ["set"],
-  TokenUpdateManyWithoutUserInput: ["create", "connectOrCreate", "upsert", "createMany", "set", "disconnect", "delete", "connect", "update", "updateMany", "deleteMany"],
+  RefreshTokenUpdateManyWithoutUserInput: ["create", "connectOrCreate", "upsert", "createMany", "set", "disconnect", "delete", "connect", "update", "updateMany", "deleteMany"],
   IntFieldUpdateOperationsInput: ["set", "increment", "decrement", "multiply", "divide"],
   UserCreateNestedOneWithoutTokensInput: ["create", "connectOrCreate", "connect"],
   EnumTokenTypeFieldUpdateOperationsInput: ["set"],
@@ -417,19 +417,19 @@ const inputsInfo = {
   NestedBoolFilter: ["equals", "not"],
   NestedEnumTokenTypeWithAggregatesFilter: ["equals", "in", "notIn", "not", "_count", "_min", "_max"],
   NestedBoolWithAggregatesFilter: ["equals", "not", "_count", "_min", "_max"],
-  TokenCreateWithoutUserInput: ["createdAt", "updatedAt", "type", "emailToken", "valid", "expiration"],
-  TokenCreateOrConnectWithoutUserInput: ["where", "create"],
-  TokenCreateManyUserInputEnvelope: ["data", "skipDuplicates"],
-  TokenUpsertWithWhereUniqueWithoutUserInput: ["where", "update", "create"],
-  TokenUpdateWithWhereUniqueWithoutUserInput: ["where", "data"],
-  TokenUpdateManyWithWhereWithoutUserInput: ["where", "data"],
-  TokenScalarWhereInput: ["AND", "OR", "NOT", "id", "createdAt", "updatedAt", "type", "emailToken", "valid", "expiration", "userId"],
+  RefreshTokenCreateWithoutUserInput: ["createdAt", "updatedAt", "type", "token", "valid", "expiration"],
+  RefreshTokenCreateOrConnectWithoutUserInput: ["where", "create"],
+  RefreshTokenCreateManyUserInputEnvelope: ["data", "skipDuplicates"],
+  RefreshTokenUpsertWithWhereUniqueWithoutUserInput: ["where", "update", "create"],
+  RefreshTokenUpdateWithWhereUniqueWithoutUserInput: ["where", "data"],
+  RefreshTokenUpdateManyWithWhereWithoutUserInput: ["where", "data"],
+  RefreshTokenScalarWhereInput: ["AND", "OR", "NOT", "id", "createdAt", "updatedAt", "type", "token", "valid", "expiration", "userId"],
   UserCreateWithoutTokensInput: ["createdAt", "email", "firstName", "lastName", "password", "role", "social"],
   UserCreateOrConnectWithoutTokensInput: ["where", "create"],
   UserUpsertWithoutTokensInput: ["update", "create"],
   UserUpdateWithoutTokensInput: ["createdAt", "email", "firstName", "lastName", "password", "role", "social"],
-  TokenCreateManyUserInput: ["id", "createdAt", "updatedAt", "type", "emailToken", "valid", "expiration"],
-  TokenUpdateWithoutUserInput: ["createdAt", "updatedAt", "type", "emailToken", "valid", "expiration"]
+  RefreshTokenCreateManyUserInput: ["id", "createdAt", "updatedAt", "type", "token", "valid", "expiration"],
+  RefreshTokenUpdateWithoutUserInput: ["createdAt", "updatedAt", "type", "token", "valid", "expiration"]
 };
 
 type InputTypesNames = keyof typeof inputTypes;

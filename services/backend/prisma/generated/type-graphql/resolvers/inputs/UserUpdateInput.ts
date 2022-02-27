@@ -5,8 +5,8 @@ import { DecimalJSScalar } from "../../scalars";
 import { DateTimeFieldUpdateOperationsInput } from "../inputs/DateTimeFieldUpdateOperationsInput";
 import { EnumRoleFieldUpdateOperationsInput } from "../inputs/EnumRoleFieldUpdateOperationsInput";
 import { NullableStringFieldUpdateOperationsInput } from "../inputs/NullableStringFieldUpdateOperationsInput";
+import { RefreshTokenUpdateManyWithoutUserInput } from "../inputs/RefreshTokenUpdateManyWithoutUserInput";
 import { StringFieldUpdateOperationsInput } from "../inputs/StringFieldUpdateOperationsInput";
-import { TokenUpdateManyWithoutUserInput } from "../inputs/TokenUpdateManyWithoutUserInput";
 
 @TypeGraphQL.InputType("UserUpdateInput", {
   isAbstract: true
@@ -47,8 +47,8 @@ export class UserUpdateInput {
   })
   social?: Prisma.InputJsonValue | undefined;
 
-  @TypeGraphQL.Field(_type => TokenUpdateManyWithoutUserInput, {
+  @TypeGraphQL.Field(_type => RefreshTokenUpdateManyWithoutUserInput, {
     nullable: true
   })
-  tokens?: TokenUpdateManyWithoutUserInput | undefined;
+  tokens?: RefreshTokenUpdateManyWithoutUserInput | undefined;
 }

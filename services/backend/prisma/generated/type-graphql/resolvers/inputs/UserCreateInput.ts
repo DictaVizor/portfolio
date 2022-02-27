@@ -2,7 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
-import { TokenCreateNestedManyWithoutUserInput } from "../inputs/TokenCreateNestedManyWithoutUserInput";
+import { RefreshTokenCreateNestedManyWithoutUserInput } from "../inputs/RefreshTokenCreateNestedManyWithoutUserInput";
 import { Role } from "../../enums/Role";
 
 @TypeGraphQL.InputType("UserCreateInput", {
@@ -44,8 +44,8 @@ export class UserCreateInput {
   })
   social?: Prisma.InputJsonValue | undefined;
 
-  @TypeGraphQL.Field(_type => TokenCreateNestedManyWithoutUserInput, {
+  @TypeGraphQL.Field(_type => RefreshTokenCreateNestedManyWithoutUserInput, {
     nullable: true
   })
-  tokens?: TokenCreateNestedManyWithoutUserInput | undefined;
+  tokens?: RefreshTokenCreateNestedManyWithoutUserInput | undefined;
 }

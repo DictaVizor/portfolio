@@ -1,2 +1,2 @@
-export { Token } from "./Token";
+export { RefreshToken } from "./RefreshToken";
 export { User } from "./User";
