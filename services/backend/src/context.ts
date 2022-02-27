@@ -1,11 +1,7 @@
-import {PrismaClient} from "@prisma/client"
-
-const prisma = new PrismaClient()
+import { PrismaClient } from "@prisma/client"
+import { PassportUser } from "fastify";
 
 export type Context = {
     prisma: PrismaClient;
-}
-
-export const context: Context = {
-    prisma: prisma
+    user?: PassportUser;
 }
