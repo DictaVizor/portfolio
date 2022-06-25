@@ -25,6 +25,7 @@ model User {
   role      Role           @default(USER)
   social    Json?
   tokens    RefreshToken[] @relation(name: "RefreshTokenToUser")
+  count Int @default(0)
 }
 
 model RefreshToken {

@@ -1,5 +1,6 @@
 import {Strategy as JwtStrategy, ExtractJwt, VerifyCallbackWithRequest} from "passport-jwt"
-import { Context } from "@src/context"
+import { Context } from "@/src/context"
+import jwt from "jsonwebtoken"
 
 export const jwtAuth = (): JwtStrategy => {
 
@@ -17,7 +18,7 @@ export const jwtAuth = (): JwtStrategy => {
             }
             return done(null, false)
         } catch(error) {
-            return done(error, false)
+            return done(null, error)
         }
 
     }

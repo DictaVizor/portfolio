@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client"
-import { PassportUser } from "fastify";
+import { PassportUser, FastifyRequest } from "fastify";
 
-export type Context = {
+export type Context = FastifyRequest & {
     prisma: PrismaClient;
     user?: PassportUser;
 }

@@ -7,16 +7,19 @@
       "esModuleInterop": true,
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
-      "target": "es2018",
+      "target": "esnext",
       "moduleResolution": "node",
       "module": "commonjs",
       "forceConsistentCasingInFileNames": true,
       "strictPropertyInitialization": false,
       "paths": {
-        "@prisma/*": ["prisma/*"],
-        "@src/*": ["src/*"]
+        "@/prisma/*": ["prisma/*"],
+        "@/src/*": ["src/*"]
       },
       "baseUrl": "."
     },
-    "include": ["**/*.ts"],
+    "include": ["**/*.ts", "**/*.d.ts"],
+    "ts-node": {
+      "require": ["tsconfig-paths/register"]
+    },
   }
