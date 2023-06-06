@@ -1,4 +1,4 @@
-const replace = require("replace-in-file");
+import replace from 'replace-in-file'
 const results = replace.sync({
     files: "prisma/generated/type-graphql/**/*.ts",
     processor: (input) => {
