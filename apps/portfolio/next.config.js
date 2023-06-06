@@ -1,10 +1,8 @@
 /** @type {import('next').NextConfig} */
 
-const withTM = require("next-transpile-modules")(["@portfolio/icons", "@portfolio/common"])
-
-
 const nextConfig = {
     reactStrictMode: true,
+    transpilePackages: ["@portfolio/icons", "@portfolio/common"]
 }
 
-module.exports = withTM(nextConfig)
+module.exports = nextConfig
