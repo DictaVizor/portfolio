@@ -22,9 +22,10 @@ model User {
   firstName String?
   lastName  String?
   password  String?
-  role      Role           @default(USER)
+  role      Role           @default(DOCTOR)
   social    Json?
   tokens    RefreshToken[] @relation(name: "RefreshTokenToUser")
+  Doctor    Doctor?
 }
 
 model RefreshToken {
@@ -39,8 +40,67 @@ model RefreshToken {
   userId     Int
 }
 
+model Doctor {
+  id           Int           @id @default(autoincrement())
+  specialty    String
+  user         User          @relation(fields: [userId], references: [id])
+  userId       Int           @unique
+  patients     Patient[]
+  tasks        Task[]
+  appointments Appointment[]
+}
+
+model Patient {
+  id           Int           @id @default(autoincrement())
+  diagnosis    String?
+  status       PatientStatus @default(AWAITING_CONSULT)
+  firstName    String
+  lastName     String
+  age          Int
+  doctor       Doctor?       @relation(fields: [doctorId], references: [id])
+  doctorId     Int?
+  gender       Gender
+  notes        String?
+  phoneNumber  String
+  appointments Appointment[]
+}
+
+model Task {
+  id          Int          @id @default(autoincrement())
+  title       String
+  description String?
+  doctor      Doctor       @relation(fields: [doctorId], references: [id])
+  doctorId    Int
+  appointment Appointment?
+  startDate   DateTime
+  endDate     DateTime
+}
+
+model Appointment {
+  id        Int     @id @default(autoincrement())
+  doctor    Doctor  @relation(fields: [doctorId], references: [id])
+  doctorId  Int
+  patient   Patient @relation(fields: [patientId], references: [id])
+  patientId Int
+  task      Task    @relation(fields: [taskId], references: [id])
+  taskId    Int     @unique
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  NON_BINARY
+}
+
+enum PatientStatus {
+  RECOVERED
+  AWAITING_SURGERY
+  ON_TREATMENT
+  AWAITING_CONSULT
+}
+
 enum Role {
-  USER
+  DOCTOR
   ADMIN
 }
 
