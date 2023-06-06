@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      "sourceMap": true,
+      "outDir": "dist",
+      "strict": true,
+      "lib": ["esnext.asynciterable", "es2018"],
+      "esModuleInterop": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "target": "es2018",
+      "moduleResolution": "node",
+      "module": "commonjs",
+      "forceConsistentCasingInFileNames": true,
+      "strictPropertyInitialization": false,
+      "paths": {
+        "@prisma/*": ["prisma/*"],
+        "@src/*": ["src/*"]
+      },
+      "baseUrl": ".",
+      "noEmitOnError": true
+    },
+    "include": ["**/*.ts"],
+  }
