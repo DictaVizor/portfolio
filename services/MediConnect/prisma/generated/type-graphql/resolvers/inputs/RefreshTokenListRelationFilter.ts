@@ -5,7 +5,7 @@ import { DecimalJSScalar } from "../../scalars";
 import { RefreshTokenWhereInput } from "../inputs/RefreshTokenWhereInput";
 
 @TypeGraphQL.InputType("RefreshTokenListRelationFilter", {
-  
+  isAbstract: true
 })
 export class RefreshTokenListRelationFilter {
   @TypeGraphQL.Field(_type => RefreshTokenWhereInput, {

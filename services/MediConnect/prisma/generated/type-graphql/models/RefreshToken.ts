@@ -6,7 +6,7 @@ import { User } from "../models/User";
 import { TokenType } from "../enums/TokenType";
 
 @TypeGraphQL.ObjectType("RefreshToken", {
-  
+  isAbstract: true
 })
 export class RefreshToken {
   @TypeGraphQL.Field(_type => TypeGraphQL.Int, {

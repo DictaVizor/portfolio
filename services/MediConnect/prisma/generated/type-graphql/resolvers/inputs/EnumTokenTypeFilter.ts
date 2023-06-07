@@ -6,7 +6,7 @@ import { NestedEnumTokenTypeFilter } from "../inputs/NestedEnumTokenTypeFilter";
 import { TokenType } from "../../enums/TokenType";
 
 @TypeGraphQL.InputType("EnumTokenTypeFilter", {
-  
+  isAbstract: true
 })
 export class EnumTokenTypeFilter {
   @TypeGraphQL.Field(_type => TokenType, {

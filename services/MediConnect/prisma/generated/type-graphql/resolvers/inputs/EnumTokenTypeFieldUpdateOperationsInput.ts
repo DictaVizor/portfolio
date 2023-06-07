@@ -5,7 +5,7 @@ import { DecimalJSScalar } from "../../scalars";
 import { TokenType } from "../../enums/TokenType";
 
 @TypeGraphQL.InputType("EnumTokenTypeFieldUpdateOperationsInput", {
-  
+  isAbstract: true
 })
 export class EnumTokenTypeFieldUpdateOperationsInput {
   @TypeGraphQL.Field(_type => TokenType, {

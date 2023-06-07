@@ -4,7 +4,7 @@ import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
 
 @TypeGraphQL.ObjectType("RefreshTokenCountAggregate", {
-  
+  isAbstract: true
 })
 export class RefreshTokenCountAggregate {
   @TypeGraphQL.Field(_type => TypeGraphQL.Int, {

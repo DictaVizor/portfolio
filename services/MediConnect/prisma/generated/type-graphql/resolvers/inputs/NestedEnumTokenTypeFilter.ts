@@ -5,7 +5,7 @@ import { DecimalJSScalar } from "../../scalars";
 import { TokenType } from "../../enums/TokenType";
 
 @TypeGraphQL.InputType("NestedEnumTokenTypeFilter", {
-  
+  isAbstract: true
 })
 export class NestedEnumTokenTypeFilter {
   @TypeGraphQL.Field(_type => TokenType, {

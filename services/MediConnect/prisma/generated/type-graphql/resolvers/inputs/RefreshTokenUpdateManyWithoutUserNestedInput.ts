@@ -12,7 +12,7 @@ import { RefreshTokenUpsertWithWhereUniqueWithoutUserInput } from "../inputs/Ref
 import { RefreshTokenWhereUniqueInput } from "../inputs/RefreshTokenWhereUniqueInput";
 
 @TypeGraphQL.InputType("RefreshTokenUpdateManyWithoutUserNestedInput", {
-  
+  isAbstract: true
 })
 export class RefreshTokenUpdateManyWithoutUserNestedInput {
   @TypeGraphQL.Field(_type => [RefreshTokenCreateWithoutUserInput], {

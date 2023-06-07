@@ -10,7 +10,7 @@ import { RefreshTokenSumOrderByAggregateInput } from "../inputs/RefreshTokenSumO
 import { SortOrder } from "../../enums/SortOrder";
 
 @TypeGraphQL.InputType("RefreshTokenOrderByWithAggregationInput", {
-  
+  isAbstract: true
 })
 export class RefreshTokenOrderByWithAggregationInput {
   @TypeGraphQL.Field(_type => SortOrder, {

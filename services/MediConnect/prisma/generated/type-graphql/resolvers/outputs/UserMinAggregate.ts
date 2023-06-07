@@ -5,7 +5,7 @@ import { DecimalJSScalar } from "../../scalars";
 import { Role } from "../../enums/Role";
 
 @TypeGraphQL.ObjectType("UserMinAggregate", {
-  
+  isAbstract: true
 })
 export class UserMinAggregate {
   @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
@@ -41,5 +41,5 @@ export class UserMinAggregate {
   @TypeGraphQL.Field(_type => Role, {
     nullable: true
   })
-  role!: "USER" | "ADMIN" | null;
+  role!: "DOCTOR" | "ADMIN" | null;
 }

@@ -10,7 +10,7 @@ import { StringNullableFilter } from "../inputs/StringNullableFilter";
 import { UserRelationFilter } from "../inputs/UserRelationFilter";
 
 @TypeGraphQL.InputType("RefreshTokenWhereInput", {
-  
+  isAbstract: true
 })
 export class RefreshTokenWhereInput {
   @TypeGraphQL.Field(_type => [RefreshTokenWhereInput], {

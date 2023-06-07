@@ -8,7 +8,7 @@ import { EnumTokenTypeFieldUpdateOperationsInput } from "../inputs/EnumTokenType
 import { NullableStringFieldUpdateOperationsInput } from "../inputs/NullableStringFieldUpdateOperationsInput";
 
 @TypeGraphQL.InputType("RefreshTokenUpdateWithoutUserInput", {
-  
+  isAbstract: true
 })
 export class RefreshTokenUpdateWithoutUserInput {
   @TypeGraphQL.Field(_type => DateTimeFieldUpdateOperationsInput, {

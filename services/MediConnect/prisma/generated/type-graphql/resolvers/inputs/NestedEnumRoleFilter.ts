@@ -5,23 +5,23 @@ import { DecimalJSScalar } from "../../scalars";
 import { Role } from "../../enums/Role";
 
 @TypeGraphQL.InputType("NestedEnumRoleFilter", {
-  
+  isAbstract: true
 })
 export class NestedEnumRoleFilter {
   @TypeGraphQL.Field(_type => Role, {
     nullable: true
   })
-  equals?: "USER" | "ADMIN" | undefined;
+  equals?: "DOCTOR" | "ADMIN" | undefined;
 
   @TypeGraphQL.Field(_type => [Role], {
     nullable: true
   })
-  in?: Array<"USER" | "ADMIN"> | undefined;
+  in?: Array<"DOCTOR" | "ADMIN"> | undefined;
 
   @TypeGraphQL.Field(_type => [Role], {
     nullable: true
   })
-  notIn?: Array<"USER" | "ADMIN"> | undefined;
+  notIn?: Array<"DOCTOR" | "ADMIN"> | undefined;
 
   @TypeGraphQL.Field(_type => NestedEnumRoleFilter, {
     nullable: true

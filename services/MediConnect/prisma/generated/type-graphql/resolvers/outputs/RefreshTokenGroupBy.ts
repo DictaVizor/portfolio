@@ -10,7 +10,7 @@ import { RefreshTokenSumAggregate } from "../outputs/RefreshTokenSumAggregate";
 import { TokenType } from "../../enums/TokenType";
 
 @TypeGraphQL.ObjectType("RefreshTokenGroupBy", {
-  
+  isAbstract: true
 })
 export class RefreshTokenGroupBy {
   @TypeGraphQL.Field(_type => TypeGraphQL.Int, {

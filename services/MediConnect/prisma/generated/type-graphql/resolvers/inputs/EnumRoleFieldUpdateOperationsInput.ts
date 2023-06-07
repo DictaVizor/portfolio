@@ -5,11 +5,11 @@ import { DecimalJSScalar } from "../../scalars";
 import { Role } from "../../enums/Role";
 
 @TypeGraphQL.InputType("EnumRoleFieldUpdateOperationsInput", {
-  
+  isAbstract: true
 })
 export class EnumRoleFieldUpdateOperationsInput {
   @TypeGraphQL.Field(_type => Role, {
     nullable: true
   })
-  set?: "USER" | "ADMIN" | undefined;
+  set?: "DOCTOR" | "ADMIN" | undefined;
 }

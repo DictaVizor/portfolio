@@ -4,7 +4,7 @@ import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
 
 @TypeGraphQL.InputType("StringFieldUpdateOperationsInput", {
-  
+  isAbstract: true
 })
 export class StringFieldUpdateOperationsInput {
   @TypeGraphQL.Field(_type => String, {

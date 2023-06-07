@@ -9,7 +9,7 @@ import { IntWithAggregatesFilter } from "../inputs/IntWithAggregatesFilter";
 import { StringNullableWithAggregatesFilter } from "../inputs/StringNullableWithAggregatesFilter";
 
 @TypeGraphQL.InputType("RefreshTokenScalarWhereWithAggregatesInput", {
-  
+  isAbstract: true
 })
 export class RefreshTokenScalarWhereWithAggregatesInput {
   @TypeGraphQL.Field(_type => [RefreshTokenScalarWhereWithAggregatesInput], {

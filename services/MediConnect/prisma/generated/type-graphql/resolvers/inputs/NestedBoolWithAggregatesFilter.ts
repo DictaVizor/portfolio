@@ -6,7 +6,7 @@ import { NestedBoolFilter } from "../inputs/NestedBoolFilter";
 import { NestedIntFilter } from "../inputs/NestedIntFilter";
 
 @TypeGraphQL.InputType("NestedBoolWithAggregatesFilter", {
-  
+  isAbstract: true
 })
 export class NestedBoolWithAggregatesFilter {
   @TypeGraphQL.Field(_type => Boolean, {

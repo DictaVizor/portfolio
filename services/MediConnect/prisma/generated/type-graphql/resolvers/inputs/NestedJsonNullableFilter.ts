@@ -4,7 +4,7 @@ import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
 
 @TypeGraphQL.InputType("NestedJsonNullableFilter", {
-  
+  isAbstract: true
 })
 export class NestedJsonNullableFilter {
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {

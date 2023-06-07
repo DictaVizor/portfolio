@@ -1,5 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import type { GraphQLResolveInfo } from "graphql";
+import { Doctor } from "../../../models/Doctor";
 import { RefreshToken } from "../../../models/RefreshToken";
 import { User } from "../../../models/User";
 import { UserTokensArgs } from "./args/UserTokensArgs";
@@ -18,6 +19,20 @@ export class UserRelationsResolver {
       },
     }).tokens({
       ...args,
+      ...(_count && transformCountFieldIntoSelectRelationsCount(_count)),
+    });
+  }
+
+  @TypeGraphQL.FieldResolver(_type => Doctor, {
+    nullable: true
+  })
+  async Doctor(@TypeGraphQL.Root() user: User, @TypeGraphQL.Ctx() ctx: any, @TypeGraphQL.Info() info: GraphQLResolveInfo): Promise<Doctor | null> {
+    const { _count } = transformInfoIntoPrismaArgs(info);
+    return getPrismaFromContext(ctx).user.findUniqueOrThrow({
+      where: {
+        id: user.id,
+      },
+    }).Doctor({
       ...(_count && transformCountFieldIntoSelectRelationsCount(_count)),
     });
   }

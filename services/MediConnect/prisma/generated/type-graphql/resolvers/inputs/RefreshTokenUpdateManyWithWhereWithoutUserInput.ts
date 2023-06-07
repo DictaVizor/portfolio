@@ -6,7 +6,7 @@ import { RefreshTokenScalarWhereInput } from "../inputs/RefreshTokenScalarWhereI
 import { RefreshTokenUpdateManyMutationInput } from "../inputs/RefreshTokenUpdateManyMutationInput";
 
 @TypeGraphQL.InputType("RefreshTokenUpdateManyWithWhereWithoutUserInput", {
-  
+  isAbstract: true
 })
 export class RefreshTokenUpdateManyWithWhereWithoutUserInput {
   @TypeGraphQL.Field(_type => RefreshTokenScalarWhereInput, {

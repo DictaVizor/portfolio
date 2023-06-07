@@ -6,7 +6,7 @@ import { UserCreateWithoutTokensInput } from "../inputs/UserCreateWithoutTokensI
 import { UserUpdateWithoutTokensInput } from "../inputs/UserUpdateWithoutTokensInput";
 
 @TypeGraphQL.InputType("UserUpsertWithoutTokensInput", {
-  
+  isAbstract: true
 })
 export class UserUpsertWithoutTokensInput {
   @TypeGraphQL.Field(_type => UserUpdateWithoutTokensInput, {

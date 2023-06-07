@@ -5,7 +5,7 @@ import { DecimalJSScalar } from "../../scalars";
 import { TokenType } from "../../enums/TokenType";
 
 @TypeGraphQL.ObjectType("RefreshTokenMaxAggregate", {
-  
+  isAbstract: true
 })
 export class RefreshTokenMaxAggregate {
   @TypeGraphQL.Field(_type => TypeGraphQL.Int, {

@@ -3,6 +3,7 @@ import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
 import { DateTimeFilter } from "../inputs/DateTimeFilter";
+import { DoctorRelationFilter } from "../inputs/DoctorRelationFilter";
 import { EnumRoleFilter } from "../inputs/EnumRoleFilter";
 import { IntFilter } from "../inputs/IntFilter";
 import { JsonNullableFilter } from "../inputs/JsonNullableFilter";
@@ -11,7 +12,7 @@ import { StringFilter } from "../inputs/StringFilter";
 import { StringNullableFilter } from "../inputs/StringNullableFilter";
 
 @TypeGraphQL.InputType("UserWhereInput", {
-  
+  isAbstract: true
 })
 export class UserWhereInput {
   @TypeGraphQL.Field(_type => [UserWhereInput], {
@@ -73,4 +74,9 @@ export class UserWhereInput {
     nullable: true
   })
   tokens?: RefreshTokenListRelationFilter | undefined;
+
+  @TypeGraphQL.Field(_type => DoctorRelationFilter, {
+    nullable: true
+  })
+  Doctor?: DoctorRelationFilter | undefined;
 }
