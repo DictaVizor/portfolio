@@ -8,7 +8,7 @@ import { NestedIntFilter } from "../inputs/NestedIntFilter";
 import { TokenType } from "../../enums/TokenType";
 
 @TypeGraphQL.InputType("EnumTokenTypeWithAggregatesFilter", {
-  
+  isAbstract: true
 })
 export class EnumTokenTypeWithAggregatesFilter {
   @TypeGraphQL.Field(_type => TokenType, {

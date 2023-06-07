@@ -9,7 +9,7 @@ import { NullableStringFieldUpdateOperationsInput } from "../inputs/NullableStri
 import { UserUpdateOneRequiredWithoutTokensNestedInput } from "../inputs/UserUpdateOneRequiredWithoutTokensNestedInput";
 
 @TypeGraphQL.InputType("RefreshTokenUpdateInput", {
-  
+  isAbstract: true
 })
 export class RefreshTokenUpdateInput {
   @TypeGraphQL.Field(_type => DateTimeFieldUpdateOperationsInput, {

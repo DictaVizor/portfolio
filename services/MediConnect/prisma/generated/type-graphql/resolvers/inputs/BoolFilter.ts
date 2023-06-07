@@ -5,7 +5,7 @@ import { DecimalJSScalar } from "../../scalars";
 import { NestedBoolFilter } from "../inputs/NestedBoolFilter";
 
 @TypeGraphQL.InputType("BoolFilter", {
-  
+  isAbstract: true
 })
 export class BoolFilter {
   @TypeGraphQL.Field(_type => Boolean, {

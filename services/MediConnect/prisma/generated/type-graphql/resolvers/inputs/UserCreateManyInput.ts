@@ -5,7 +5,7 @@ import { DecimalJSScalar } from "../../scalars";
 import { Role } from "../../enums/Role";
 
 @TypeGraphQL.InputType("UserCreateManyInput", {
-  
+  isAbstract: true
 })
 export class UserCreateManyInput {
   @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
@@ -41,7 +41,7 @@ export class UserCreateManyInput {
   @TypeGraphQL.Field(_type => Role, {
     nullable: true
   })
-  role?: "USER" | "ADMIN" | undefined;
+  role?: "DOCTOR" | "ADMIN" | undefined;
 
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true

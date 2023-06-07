@@ -2,11 +2,12 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
+import { DoctorOrderByWithRelationInput } from "../inputs/DoctorOrderByWithRelationInput";
 import { RefreshTokenOrderByRelationAggregateInput } from "../inputs/RefreshTokenOrderByRelationAggregateInput";
 import { SortOrder } from "../../enums/SortOrder";
 
 @TypeGraphQL.InputType("UserOrderByWithRelationInput", {
-  
+  isAbstract: true
 })
 export class UserOrderByWithRelationInput {
   @TypeGraphQL.Field(_type => SortOrder, {
@@ -53,4 +54,9 @@ export class UserOrderByWithRelationInput {
     nullable: true
   })
   tokens?: RefreshTokenOrderByRelationAggregateInput | undefined;
+
+  @TypeGraphQL.Field(_type => DoctorOrderByWithRelationInput, {
+    nullable: true
+  })
+  Doctor?: DoctorOrderByWithRelationInput | undefined;
 }

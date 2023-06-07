@@ -2,12 +2,13 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../scalars";
+import { Doctor } from "../models/Doctor";
 import { RefreshToken } from "../models/RefreshToken";
 import { Role } from "../enums/Role";
 import { UserCount } from "../resolvers/outputs/UserCount";
 
 @TypeGraphQL.ObjectType("User", {
-  
+  isAbstract: true
 })
 export class User {
   @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
@@ -43,7 +44,7 @@ export class User {
   @TypeGraphQL.Field(_type => Role, {
     nullable: false
   })
-  role!: "USER" | "ADMIN";
+  role!: "DOCTOR" | "ADMIN";
 
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true
@@ -51,6 +52,8 @@ export class User {
   social?: Prisma.JsonValue | null;
 
   tokens?: RefreshToken[];
+
+  Doctor?: Doctor | null;
 
   @TypeGraphQL.Field(_type => UserCount, {
     nullable: true

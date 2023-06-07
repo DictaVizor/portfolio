@@ -6,7 +6,7 @@ import { UserCreateNestedOneWithoutTokensInput } from "../inputs/UserCreateNeste
 import { TokenType } from "../../enums/TokenType";
 
 @TypeGraphQL.InputType("RefreshTokenCreateInput", {
-  
+  isAbstract: true
 })
 export class RefreshTokenCreateInput {
   @TypeGraphQL.Field(_type => Date, {

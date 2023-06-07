@@ -5,7 +5,7 @@ import { DecimalJSScalar } from "../../scalars";
 import { SortOrder } from "../../enums/SortOrder";
 
 @TypeGraphQL.InputType("RefreshTokenSumOrderByAggregateInput", {
-  
+  isAbstract: true
 })
 export class RefreshTokenSumOrderByAggregateInput {
   @TypeGraphQL.Field(_type => SortOrder, {

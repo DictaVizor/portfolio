@@ -3,13 +3,14 @@ import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
 import { DateTimeFieldUpdateOperationsInput } from "../inputs/DateTimeFieldUpdateOperationsInput";
+import { DoctorUpdateOneWithoutUserNestedInput } from "../inputs/DoctorUpdateOneWithoutUserNestedInput";
 import { EnumRoleFieldUpdateOperationsInput } from "../inputs/EnumRoleFieldUpdateOperationsInput";
 import { NullableStringFieldUpdateOperationsInput } from "../inputs/NullableStringFieldUpdateOperationsInput";
 import { RefreshTokenUpdateManyWithoutUserNestedInput } from "../inputs/RefreshTokenUpdateManyWithoutUserNestedInput";
 import { StringFieldUpdateOperationsInput } from "../inputs/StringFieldUpdateOperationsInput";
 
 @TypeGraphQL.InputType("UserUpdateInput", {
-  
+  isAbstract: true
 })
 export class UserUpdateInput {
   @TypeGraphQL.Field(_type => DateTimeFieldUpdateOperationsInput, {
@@ -51,4 +52,9 @@ export class UserUpdateInput {
     nullable: true
   })
   tokens?: RefreshTokenUpdateManyWithoutUserNestedInput | undefined;
+
+  @TypeGraphQL.Field(_type => DoctorUpdateOneWithoutUserNestedInput, {
+    nullable: true
+  })
+  Doctor?: DoctorUpdateOneWithoutUserNestedInput | undefined;
 }

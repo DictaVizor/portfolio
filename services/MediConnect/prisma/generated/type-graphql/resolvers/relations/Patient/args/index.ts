@@ -1,0 +1,1 @@
+export { PatientAppointmentsArgs } from "./PatientAppointmentsArgs";

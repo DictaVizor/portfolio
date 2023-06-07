@@ -9,7 +9,7 @@ import { RefreshTokenMinAggregate } from "../outputs/RefreshTokenMinAggregate";
 import { RefreshTokenSumAggregate } from "../outputs/RefreshTokenSumAggregate";
 
 @TypeGraphQL.ObjectType("AggregateRefreshToken", {
-  
+  isAbstract: true
 })
 export class AggregateRefreshToken {
   @TypeGraphQL.Field(_type => RefreshTokenCountAggregate, {

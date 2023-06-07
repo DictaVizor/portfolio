@@ -5,7 +5,7 @@ import { DecimalJSScalar } from "../../scalars";
 import { TokenType } from "../../enums/TokenType";
 
 @TypeGraphQL.InputType("RefreshTokenCreateManyUserInput", {
-  
+  isAbstract: true
 })
 export class RefreshTokenCreateManyUserInput {
   @TypeGraphQL.Field(_type => TypeGraphQL.Int, {

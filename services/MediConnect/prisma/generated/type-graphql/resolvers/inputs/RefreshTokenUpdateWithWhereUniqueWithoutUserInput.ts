@@ -6,7 +6,7 @@ import { RefreshTokenUpdateWithoutUserInput } from "../inputs/RefreshTokenUpdate
 import { RefreshTokenWhereUniqueInput } from "../inputs/RefreshTokenWhereUniqueInput";
 
 @TypeGraphQL.InputType("RefreshTokenUpdateWithWhereUniqueWithoutUserInput", {
-  
+  isAbstract: true
 })
 export class RefreshTokenUpdateWithWhereUniqueWithoutUserInput {
   @TypeGraphQL.Field(_type => RefreshTokenWhereUniqueInput, {

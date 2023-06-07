@@ -10,7 +10,7 @@ import { UserSumAggregate } from "../outputs/UserSumAggregate";
 import { Role } from "../../enums/Role";
 
 @TypeGraphQL.ObjectType("UserGroupBy", {
-  
+  isAbstract: true
 })
 export class UserGroupBy {
   @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
@@ -46,7 +46,7 @@ export class UserGroupBy {
   @TypeGraphQL.Field(_type => Role, {
     nullable: false
   })
-  role!: "USER" | "ADMIN";
+  role!: "DOCTOR" | "ADMIN";
 
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true

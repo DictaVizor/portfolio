@@ -9,7 +9,7 @@ import { UserUpsertWithoutTokensInput } from "../inputs/UserUpsertWithoutTokensI
 import { UserWhereUniqueInput } from "../inputs/UserWhereUniqueInput";
 
 @TypeGraphQL.InputType("UserUpdateOneRequiredWithoutTokensNestedInput", {
-  
+  isAbstract: true
 })
 export class UserUpdateOneRequiredWithoutTokensNestedInput {
   @TypeGraphQL.Field(_type => UserCreateWithoutTokensInput, {

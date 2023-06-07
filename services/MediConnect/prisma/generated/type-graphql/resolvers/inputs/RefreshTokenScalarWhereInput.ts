@@ -9,7 +9,7 @@ import { IntFilter } from "../inputs/IntFilter";
 import { StringNullableFilter } from "../inputs/StringNullableFilter";
 
 @TypeGraphQL.InputType("RefreshTokenScalarWhereInput", {
-  
+  isAbstract: true
 })
 export class RefreshTokenScalarWhereInput {
   @TypeGraphQL.Field(_type => [RefreshTokenScalarWhereInput], {

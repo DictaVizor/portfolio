@@ -6,7 +6,7 @@ import { UserOrderByWithRelationInput } from "../inputs/UserOrderByWithRelationI
 import { SortOrder } from "../../enums/SortOrder";
 
 @TypeGraphQL.InputType("RefreshTokenOrderByWithRelationInput", {
-  
+  isAbstract: true
 })
 export class RefreshTokenOrderByWithRelationInput {
   @TypeGraphQL.Field(_type => SortOrder, {

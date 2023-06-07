@@ -2,11 +2,12 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
+import { DoctorCreateNestedOneWithoutUserInput } from "../inputs/DoctorCreateNestedOneWithoutUserInput";
 import { RefreshTokenCreateNestedManyWithoutUserInput } from "../inputs/RefreshTokenCreateNestedManyWithoutUserInput";
 import { Role } from "../../enums/Role";
 
 @TypeGraphQL.InputType("UserCreateInput", {
-  
+  isAbstract: true
 })
 export class UserCreateInput {
   @TypeGraphQL.Field(_type => Date, {
@@ -37,7 +38,7 @@ export class UserCreateInput {
   @TypeGraphQL.Field(_type => Role, {
     nullable: true
   })
-  role?: "USER" | "ADMIN" | undefined;
+  role?: "DOCTOR" | "ADMIN" | undefined;
 
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true
@@ -48,4 +49,9 @@ export class UserCreateInput {
     nullable: true
   })
   tokens?: RefreshTokenCreateNestedManyWithoutUserInput | undefined;
+
+  @TypeGraphQL.Field(_type => DoctorCreateNestedOneWithoutUserInput, {
+    nullable: true
+  })
+  Doctor?: DoctorCreateNestedOneWithoutUserInput | undefined;
 }

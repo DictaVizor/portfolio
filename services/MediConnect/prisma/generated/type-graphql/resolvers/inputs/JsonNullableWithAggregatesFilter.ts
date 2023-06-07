@@ -6,7 +6,7 @@ import { NestedIntNullableFilter } from "../inputs/NestedIntNullableFilter";
 import { NestedJsonNullableFilter } from "../inputs/NestedJsonNullableFilter";
 
 @TypeGraphQL.InputType("JsonNullableWithAggregatesFilter", {
-  
+  isAbstract: true
 })
 export class JsonNullableWithAggregatesFilter {
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {

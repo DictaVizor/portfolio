@@ -8,7 +8,7 @@ import { RefreshTokenCreateWithoutUserInput } from "../inputs/RefreshTokenCreate
 import { RefreshTokenWhereUniqueInput } from "../inputs/RefreshTokenWhereUniqueInput";
 
 @TypeGraphQL.InputType("RefreshTokenCreateNestedManyWithoutUserInput", {
-  
+  isAbstract: true
 })
 export class RefreshTokenCreateNestedManyWithoutUserInput {
   @TypeGraphQL.Field(_type => [RefreshTokenCreateWithoutUserInput], {

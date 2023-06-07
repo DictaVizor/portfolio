@@ -6,7 +6,7 @@ import { UserCreateWithoutTokensInput } from "../inputs/UserCreateWithoutTokensI
 import { UserWhereUniqueInput } from "../inputs/UserWhereUniqueInput";
 
 @TypeGraphQL.InputType("UserCreateOrConnectWithoutTokensInput", {
-  
+  isAbstract: true
 })
 export class UserCreateOrConnectWithoutTokensInput {
   @TypeGraphQL.Field(_type => UserWhereUniqueInput, {
