@@ -26,6 +26,14 @@ export const ProjectSection = () => {
             imageUrl: "/portfolio_preview.png",
             isSameDomain: true,
           },
+          {
+            title: 'Danone Hackaton',
+            description: 'Project was built within a 2 sessions of 8 hours each during Danone Hackaton 2023.',
+            livePreviewUrl: 'https://danone-hackaton-8ypklcv2g-dictavizor.vercel.app',
+            imageUrl: "danone_hackaton_preview.png",
+            isSameDomain: false,
+            githubUrl: 'https://github.com/DictaVizor/danone-hackaton'
+          }
         ]}
       />
     </Box>
